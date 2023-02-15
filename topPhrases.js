@@ -25,13 +25,13 @@ async function processStdinPhrases() {
             let arrChunk = [];
             const reg = /(?=\S*['’-])([a-zA-Z'’-]+)|\b([a-zA-z]+)\b/g
             arrChunk = line.toLowerCase().match(reg);
-            if (arrChunk){
+            if (arrChunk) {
                 fileTxtArr.push(...arrChunk);
             }
         }
     });
     rl.once('close', async () => {
-        if (fileTxtArr.length === 0){
+        if (fileTxtArr.length === 0) {
             console.error('No data was detected in the provide file(s)')
             return;
         }
