@@ -65,7 +65,7 @@ async function processFile(fileName) {
 
 async function readStream(fileName, fileTxtArr) {
     return new Promise(function (resolve, reject) {
-        const readableStream = fs.createReadStream('./testFiles/' + fileName, 'utf8');
+        const readableStream = fs.createReadStream('./textFiles/' + fileName, 'utf8');
 
         readableStream.on('error', function (error) {
             reject(error.message)
