@@ -80,7 +80,7 @@ async function readStream(fileName, fileTxtArr) {
         })
 
         readableStream.on('end', () => {
-            resolve()
+            resolve();
         })
     })
 }
